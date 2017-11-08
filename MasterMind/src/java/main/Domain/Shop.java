@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class Shop {
 
-	private ArrayList<Article> availableArticles = new ArrayList<Article>();
+	private static ArrayList<Article> availableArticles = new ArrayList<Article>();
 	
 	public Shop() {
 		String clueDescription = "A clue which will provide you help during the game.\n"
@@ -39,4 +39,17 @@ public class Shop {
 		return shop;
 	}
 	
+	public static Article getArticleByNum(int articleNum) {
+		return availableArticles.get(articleNum); //May generate an exception if invalid index
+	}
+	
+	public Article getArticleByName(String articleName) {
+		for (int i = 0; i < availableArticles.size(); ++i) {
+			Article a = availableArticles.get(i);
+			String name = a.getName();
+			if (name == articleName) return a;
+		}
+		//May generate an exception in no item with that name exists
+		return null;
+	}
 }
