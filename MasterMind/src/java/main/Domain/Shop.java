@@ -1,7 +1,7 @@
 package java.main.Domain;
 
-import java.main.Domain.Article;
 import java.util.ArrayList;
+import java.main.Auxiliar.Pair;
 
 public class Shop {
 
@@ -39,17 +39,20 @@ public class Shop {
 		return shop;
 	}
 	
-	public static Article getArticleByNum(int articleNum) {
+	public Article getArticleByNum(int articleNum) {
 		return availableArticles.get(articleNum); //May generate an exception if invalid index
 	}
 	
-	public Article getArticleByName(String articleName) {
+	public Pair<Integer, Article> getArticleByName(String articleName) {
 		for (int i = 0; i < availableArticles.size(); ++i) {
 			Article a = availableArticles.get(i);
 			String name = a.getName();
-			if (name == articleName) return a;
+			if (name == articleName) {
+				Pair<Integer, Article> p = new Pair<Integer, Article>(i, a);
+				return p;
+			}
 		}
-		//May generate an exception in no item with that name exists
+		//EXCEPTION: THERE IS NO ARTICLE WITH SUCH A NAME
 		return null;
 	}
 }
