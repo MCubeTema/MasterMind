@@ -14,7 +14,7 @@ public class ArticleDriver {
 		System.out.println("4 - Get the description of the last created article");
 		System.out.println("5 - Exit");
 		Scanner scanner = new Scanner (System.in);
-		Article a = null;
+		Article article = null;
 		int option;
 		while (scanner.hasNext()) {
 			option = scanner.nextInt();
@@ -31,39 +31,40 @@ public class ArticleDriver {
 				sellingPrice = scanner.nextInt();
 				scanner.hasNext();
 				description = scanner.next();
-				a = new Article(name, buyingPrice, sellingPrice, description);
+				article = new Article(name, buyingPrice, sellingPrice, description);
 				System.out.println("Article created successfully");
 			}
 			else if (option == 1) {
-				if (!a.equals(null)) {
-					String name = a.getName();
+				if (article != null) {
+					String name = article.getName();
 					System.out.println("The name of the last article created is " + name);
 				}
 				else System.out.println("Please, create the article first");
 			}
 			else if (option == 2) {
-				if (!a.equals(null)) {
-					int buyingPrice = a.getBuyingPrice();
+				if (article != null) {
+					int buyingPrice = article.getBuyingPrice();
 					System.out.println("The buying price of the last article created is " + buyingPrice);
 				}
 				else System.out.println("Please, create the article first");
 			}
 			else if (option == 3) {
-				if (!a.equals(null)) {
-					int sellingPrice = a.getSellingPrice();
+				if (article != null) {
+					int sellingPrice = article.getSellingPrice();
 					System.out.println("The selling price of the last article created is " + sellingPrice);
 				}
 				else System.out.println("Please, create the article first");
 			}
 			else if (option == 4) {
-				if (!a.equals(null)) {
-					String description = a.getDescription();
+				if (article != null) {
+					String description = article.getDescription();
 					System.out.println("The description of the last article created is " + description);
 				}
 				else System.out.println("Please, create the article first");
 			}
 			else break;
 		}
+		scanner.close();
 		System.out.println("Now leaving");
 	}
 }

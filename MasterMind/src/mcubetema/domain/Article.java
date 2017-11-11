@@ -29,5 +29,4 @@ public class Article {
 	public String getDescription() {
 		return description;
 	}
-
 }

@@ -1,11 +1,11 @@
 package mcubetema.domain;
 
 import java.util.ArrayList;
-import java.main.Auxiliar.Pair;
 
 public class Shop {
 
 	private static ArrayList<Article> availableArticles;
+	private static ArrayList<Integer> scoreToUnlock;
 	private ArrayList<Boolean> unlockedArticles;
 	
 	private void commonShopConstructor() {
@@ -19,6 +19,9 @@ public class Shop {
 		availableArticles = new ArrayList<Article>();
 		availableArticles.add(clue);
 		availableArticles.add(jocker);
+		scoreToUnlock = new ArrayList<Integer>();
+		scoreToUnlock.add(4000);
+		scoreToUnlock.add(6000);
 		unlockedArticles = new ArrayList<Boolean>();
 	}
 	
@@ -29,11 +32,12 @@ public class Shop {
 	}
 	
 	public Shop (ArrayList<Boolean> shopInfo) {
+		commonShopConstructor();
 		unlockedArticles = shopInfo;
 	}
 	
 	public ArrayList<ArrayList<String>> getShop() {
-		ArrayList<ArrayList<String>> shop = new ArrayList<ArrayList<String>>();
+		ArrayList<ArrayList<String>> shopInfo = new ArrayList<ArrayList<String>>();
 		for (int i = 0; i < availableArticles.size(); ++i) {
 			if (unlockedArticles.get(i)) { //If the article is unlocked, it is available in the shop
 				Article a = availableArticles.get(i);
@@ -46,10 +50,10 @@ public class Shop {
 				articleInfo.add(buyingPrice);
 				articleInfo.add(sellingPrice);
 				articleInfo.add(description);
-				shop.add(articleInfo);
+				shopInfo.add(articleInfo);
 			}
 		}
-		return shop;
+		return shopInfo;
 	}
 	
 	public ArrayList<String> getShopForSave() {
@@ -59,23 +63,6 @@ public class Shop {
 			else shopInfo.add("0");
 		}
 		return shopInfo;
-	}
-	
-	public Article getArticleByNum(int articleNum) {
-		return availableArticles.get(articleNum); //May generate an exception if invalid index
-	}
-	
-	public Pair<Integer, Article> getArticleByName(String articleName) {
-		for (int i = 0; i < availableArticles.size(); ++i) {
-			Article a = availableArticles.get(i);
-			String name = a.getName();
-			if (name == articleName) {
-				Pair<Integer, Article> p = new Pair<Integer, Article>(i, a);
-				return p;
-			}
-		}
-		//EXCEPTION: THERE IS NO ARTICLE WITH SUCH A NAME
-		return null;
 	}
 	
 	public boolean isItemUnlocked (int articleNum) {
@@ -92,7 +79,11 @@ public class Shop {
 		return a.getSellingPrice();
 	}
 	
-	public void unlockArticle (int articleNum) {
-		unlockedArticles.set(articleNum, true);
+	public void updateUnlocks (int score) {
+		for (int i = 0; i < availableArticles.size(); ++i) {
+			if (score >= scoreToUnlock.get(i)) {
+				unlockedArticles.set(i, true);
+			}
+		}
 	}
 }

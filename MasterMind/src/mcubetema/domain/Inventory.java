@@ -21,10 +21,6 @@ public class Inventory {
 		amountOfArticles = amounts; //May aliasing be a problem?
 	}
 	
-	public void setNumberOfCoins(int numberOfCoins) {
-		this.numberOfCoins = numberOfCoins;
-	}
-	
 	public void spendCoins(int spentCoins) {
 		this.numberOfCoins -= spentCoins;
 	}
@@ -39,6 +35,7 @@ public class Inventory {
 	
 	public ArrayList<String> getInventory() {
 		ArrayList<String> amountOfArticlesString = new ArrayList<String>();
+		amountOfArticlesString.add(String.valueOf(numberOfCoins));
 		for (int i = 0; i < amountOfArticles.size(); ++i) {
 			int amount = amountOfArticles.get(i);
 			String amountString = String.valueOf(amount);

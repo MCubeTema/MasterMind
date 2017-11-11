@@ -33,6 +33,7 @@ public class Player {
 		this.score = score;
 		inventory = new Inventory (numberOfCoins, inventoryInfo);
 		shop = new Shop (shopInfo);
+		isLoggedIn = true;
 		return 0;
 	}
 	
@@ -95,6 +96,11 @@ public class Player {
 		else return -1;
 	}
 	
+	public void addScore (int scoreToAdd) {
+		score += scoreToAdd;
+		shop.updateUnlocks(score);
+	}
+	
 	public ArrayList<ArrayList<String>> getPlayerData() {
 		ArrayList<ArrayList<String>> playerData = new ArrayList<ArrayList<String>>();
 		/* FORMAT: ArrayList with the basic primitive info (username, password,
@@ -114,5 +120,4 @@ public class Player {
 		playerData.add(shopInfo);
 		return playerData;
 	}
-	
 }
