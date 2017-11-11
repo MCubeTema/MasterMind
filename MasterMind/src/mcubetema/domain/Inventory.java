@@ -1,4 +1,4 @@
-package java.main.Domain;
+package mcubetema.domain;
 
 import java.util.ArrayList;
 

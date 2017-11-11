@@ -1,4 +1,4 @@
-package java.main.Domain;
+package mcubetema.domain;
 
 import java.util.ArrayList;
 import java.main.Auxiliar.Pair;
@@ -11,11 +11,11 @@ public class Shop {
 	private void commonShopConstructor() {
 		String clueDescription = "A clue which will provide you help during the game.\n"
 				+ "You can only use it 3 times per game.";
-		Article clue = new Article("Clue", 15, 7, clueDescription, false);
+		Article clue = new Article("Clue", 15, 7, clueDescription);
 		String jockerDescription = "A ball you can place wherever you want and that\n"
 				+ "will either tell be a correct colour in an incorrect position or\n"
 				+ "a correct colour in a correct position.";
-		Article jocker = new Article("Jocker", 30, 15, jockerDescription, false);
+		Article jocker = new Article("Jocker", 30, 15, jockerDescription);
 		availableArticles = new ArrayList<Article>();
 		availableArticles.add(clue);
 		availableArticles.add(jocker);
