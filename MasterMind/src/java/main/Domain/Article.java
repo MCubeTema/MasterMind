@@ -6,14 +6,12 @@ public class Article {
 	private int buyingPrice;
 	private int sellingPrice;
 	private String description;
-	private boolean unlocked;
 	
 	public Article(String name, int buyingPrice, int sellingPrice, String description, boolean unlocked) {
 		this.name = name;
 		this.buyingPrice = buyingPrice;
 		this.sellingPrice = sellingPrice;
 		this.description = description;
-		this.unlocked = unlocked;
 	}
 	
 	public void setName(String name) {
@@ -32,10 +30,6 @@ public class Article {
 		this.description = description;
 	}
 	
-	public void setUnlocked(boolean unlocked) {
-		this.unlocked = unlocked;
-	}
-	
 	public String getName() {
 		return name;
 	}
@@ -50,10 +44,6 @@ public class Article {
 	
 	public String getDescription() {
 		return description;
-	}
-	
-	public boolean getUnlocked() {
-		return unlocked;
 	}
 
 }
