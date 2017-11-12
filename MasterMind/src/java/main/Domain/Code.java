@@ -18,10 +18,5 @@ public class Code {
 	
 	public String getCode () {
 		return code; 
-	}
-	
-	public boolean compatibleCode (String inCode) {
-		//To do
-		return true; 
-	}		
+	}	
 }

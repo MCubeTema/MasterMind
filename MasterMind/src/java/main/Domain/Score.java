@@ -30,4 +30,8 @@ public class Score {
 	public void setBlacks (int blacks) {
 		numBlacks = blacks; 
 	}
+	
+	public boolean equalScore (int whites, int blacks) {
+		return (whites == numWhites && blacks == numBlacks);
+	}
 }
