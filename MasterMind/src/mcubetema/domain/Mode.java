@@ -30,7 +30,7 @@ public class Mode {
 	public void setEasy() {
 		difFactor = 0.75;
 		clueFactor = 20.0;
-		rowBon = 100.0;
+		rowBon = 75.0;
 		numberColors = 5;
 		nRows = 8.;
 		nCols = 4;
