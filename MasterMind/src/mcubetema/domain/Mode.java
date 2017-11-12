@@ -1,4 +1,4 @@
-package macubetema.domain;
+package mcubetema.domain;
 
 public class Mode {
 	
@@ -15,16 +15,17 @@ public class Mode {
 	}
 	public Mode(String t) {
 		type = t;
-		if (type == "Easy") {
-			setDifficult();
-		}
-		else if (type == "Medium") {
-			setMedium();
-		}
-		else if(type == "Difficult") {
+		if (type.equals("Easy")) {
 			setEasy();
 		}
+		else if (type.equals("Medium")) {
+			setMedium();
+		}
+		else if(type.equals("Difficult")) {
+			setDifficult();
+		}
 	}
+	
 	public void setDifficult() {
 		difFactor = 1.25;
 		clueFactor = 50.0;
