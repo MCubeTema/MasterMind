@@ -2,7 +2,7 @@ package Drivers;
 
 import java.util.Scanner;
 import java.sql.*;
-import mcubetema.domain.Mode;
+import mcubetema.domain.RankingChronoRow;
 
 public class RankingChronoRowDriver {
 	public static void write_options() {
