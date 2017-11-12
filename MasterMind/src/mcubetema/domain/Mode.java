@@ -1,7 +1,8 @@
-package mcubetema.domain;
+package macubetema.domain;
 
 public class Mode {
 	
+	private String type;
 	private Double difFactor;
 	private Double clueFactor;
 	private Double rowBon;
@@ -10,6 +11,19 @@ public class Mode {
 	private Integer nCols;
 	
 	public Mode() {
+		
+	}
+	public Mode(String t) {
+		type = t;
+		if (type == "Easy") {
+			setDifficult();
+		}
+		else if (type == "Medium") {
+			setMedium();
+		}
+		else if(type == "Difficult") {
+			setEasy();
+		}
 	}
 	public void setDifficult() {
 		difFactor = 1.25;
@@ -30,12 +44,15 @@ public class Mode {
 	public void setEasy() {
 		difFactor = 0.75;
 		clueFactor = 20.0;
-		rowBon = 75.0;
+		rowBon = 100.0;
 		numberColors = 5;
 		nRows = 8.;
 		nCols = 4;
 	}
 	
+	public String getType() {
+		return type;
+	}
 	public Double getdifFactor() {
 		return difFactor;
 	}
