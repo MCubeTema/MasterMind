@@ -1,6 +1,6 @@
 package mcubetema.domain;
 import java.util.*;
-
+package java.Auxiliar.Pair;
 public class Ranking {
 
 	private String rank_name;
