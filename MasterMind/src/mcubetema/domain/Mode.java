@@ -7,7 +7,7 @@ public class Mode {
 	private Double clueFactor;
 	private Double rowBon;
 	private Integer numberColors;
-	private Double nRows;
+	private Integer nRows;
 	private Integer nCols;
 	
 	public Mode() {
@@ -31,7 +31,7 @@ public class Mode {
 		clueFactor = 50.0;
 		rowBon = 125.0;
 		numberColors = 8;
-		nRows = 12.;
+		nRows = 12;
 		nCols = 5;
 	}
 	public void setMedium() {
@@ -39,7 +39,7 @@ public class Mode {
 		clueFactor = 35.0;
 		rowBon = 100.0;
 		numberColors = 5;
-		nRows = 10.;
+		nRows = 10;
 		nCols = 4; 
 	}
 	public void setEasy() {
@@ -47,7 +47,7 @@ public class Mode {
 		clueFactor = 20.0;
 		rowBon = 100.0;
 		numberColors = 5;
-		nRows = 8.;
+		nRows = 8;
 		nCols = 4;
 	}
 	
@@ -70,7 +70,7 @@ public class Mode {
 		return numberColors;
 	}
 	
-	public Double getnRows() {
+	public Integer getnRows() {
 		return nRows;
 	}
 	
