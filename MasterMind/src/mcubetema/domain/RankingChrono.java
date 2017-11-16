@@ -4,9 +4,9 @@ import java.util.*;
 
 public class RankingChrono extends Ranking{
 	private TreeSet<RankingChronoRow> chronoRows;
-	
- 	public RankingChrono(String name,  ArrayList<String> colums) {
-		super(name,colums);
+	/*Create a new RankingChrono rank_name = name, col_names = colums, difficuly = diff and an empty chronoRows*/
+ 	public RankingChrono(String name,  ArrayList<String> colums, String diff) {
+		super(name,colums, diff);
 		chronoRows = new TreeSet<RankingChronoRow>();
 	}
  	public TreeSet<RankingChronoRow> getChronoRow() {
