@@ -9,9 +9,13 @@ public class RankingChrono extends Ranking{
 		super(name,colums, diff);
 		chronoRows = new TreeSet<RankingChronoRow>();
 	}
+	/*Pre: True
+	  Post: Return the chronoRows in this Ranking*/
  	public TreeSet<RankingChronoRow> getChronoRow() {
  		return chronoRows;
  	}
+	/*Pre: True
+	  Post: Add a new chronoRow to chronoRows*/
  	public boolean addChronoRow(RankingChronoRow r) {
  		chronoRows.add(r);
  		return true;
