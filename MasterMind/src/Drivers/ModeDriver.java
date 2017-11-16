@@ -1,3 +1,4 @@
+/ Author: Manuel Fernando Romani Ortiz /
 package Domain;
 
 import java.util.Scanner;
