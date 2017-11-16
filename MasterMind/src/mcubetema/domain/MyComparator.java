@@ -3,6 +3,7 @@ package mcubetema.domain;
 import java.util.*;
 
 class MyComparator implements Comparator<RankingRow> {
+	/* Compare two RankingRows: First by Score and then by Username*/
 	public int compare(RankingRow r1, RankingRow r2) {
 		if (r1.getScore() < r2.getScore()) {
 			return 1;
