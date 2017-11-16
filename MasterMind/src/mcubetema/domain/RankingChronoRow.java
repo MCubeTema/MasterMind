@@ -12,10 +12,13 @@ public class RankingChronoRow extends RankingRow {
 		super(user,score);
 		this.time = time;
 	}
-	
+	/*Pre: True
+	  Post: Return the time of a RankingChronoRow*/
 	public Time getTime() {
 		return time;
 	}
+	/*Pre: True
+	  Post: Set time in Time of a RankingChronoRow*/
 	public boolean setTime(Time time) {
 		this.time = time;
 		return true;
