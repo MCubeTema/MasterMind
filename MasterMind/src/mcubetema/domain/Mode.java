@@ -13,6 +13,7 @@ public class Mode {
 	public Mode() {
 		
 	}
+	/*Create a new mode with the difficulty t*/
 	public Mode(String t) {
 		type = t;
 		if (type.equals("Easy")) {
@@ -25,7 +26,7 @@ public class Mode {
 			setDifficult();
 		}
 	}
-	
+	/*Set all values of difficult mode*/
 	public void setDifficult() {
 		difFactor = 1.25;
 		clueFactor = 50.0;
@@ -34,6 +35,7 @@ public class Mode {
 		nRows = 12;
 		nCols = 5;
 	}
+	/*Set all values of medium mode*/
 	public void setMedium() {
 		difFactor = 1.0;
 		clueFactor = 35.0;
@@ -42,6 +44,7 @@ public class Mode {
 		nRows = 10;
 		nCols = 4; 
 	}
+	/*Set all values of easy mode*/
 	public void setEasy() {
 		difFactor = 0.75;
 		clueFactor = 20.0;
