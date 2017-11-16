@@ -53,30 +53,38 @@ public class Mode {
 		nRows = 8;
 		nCols = 4;
 	}
-	
+	/*Pre: True
+	  Post: Return the difficulty of Match*/
 	public String getType() {
 		return type;
 	}
+	/*Pre: True
+	  Post: Return the diffFactor to calculate the score in game*/
 	public Double getdifFactor() {
 		return difFactor;
 	}
-	
+	/*Pre: True
+	  Post: Return the clueFactor to calculate the score in game*/
 	public Double getclueFactor() {
 		return clueFactor;
 	}
-	
+	/*Pre: True
+	  Post: Return the rowBon to calculate the score in game*/
 	public Double getrowBon() {
 		return rowBon;
 	}
-	
+	/*Pre: True
+	  Post: Return the number of colors for a game mode*/
 	public Integer getnumberColors() {
 		return numberColors;
 	}
-	
+	/*Pre: True
+	  Post: Return the number of rows of board for a game mode*/
 	public Integer getnRows() {
 		return nRows;
 	}
-	
+	/*Pre: True
+	  Post: Return the number of cols of board for a game mode*/
 	public Integer getnCols() {
 		return nCols;
 	}
