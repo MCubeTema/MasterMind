@@ -7,7 +7,7 @@ public class RankingChronoRow extends RankingRow {
 	
 	public RankingChronoRow() {
 	}
-	
+	/*Create a new RankingChronoRow with super.user = user, super.score = score and the time used in the game*/
 	public RankingChronoRow(String user, int score, Time time) {
 		super(user,score);
 		this.time = time;
