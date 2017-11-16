@@ -40,7 +40,7 @@ public class Mode {
 		difFactor = 1.0;
 		clueFactor = 35.0;
 		rowBon = 100.0;
-		numberColors = 5;
+		numberColors = 6;
 		nRows = 10;
 		nCols = 4; 
 	}
