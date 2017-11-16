@@ -12,15 +12,18 @@ public class RankingRow implements Comparable<RankingRow>{
 		user = u;
 		score = s;
 	}
-	
+	/*Pre: True
+	  Post: Return the user of RankingRow*/
 	public String getUser() {
 		return user;
 	}
-	
+	/*Pre: True
+	  Post: Return the score of RankingRow*/
 	public int getScore() {
 		return score;
 	}
-	
+	/*Pre: True
+	  Post: Set a s in score of RankingRow*/
 	public boolean setScore(Integer s) {
 		score = s;
 		return true;
